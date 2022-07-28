@@ -14,11 +14,15 @@ Second project for my Nanodegree course.
 - Model Loading and Saving Library: Pickle
 - Web App and Data Visualization: Flask, Plotly
 
+## Github repo
+https://github.com/nhDuc1993/disaster_response/
+
 ## Tutorial
 Clone the repo and
-- Run the ELT pipeline: python data/etl_pipeline.py
-- Run the ML pipeline: python data/train.py
-- Run the webapp: python app/run.py
+- Cd to data folder and run the ELT pipeline: python etl_pipeline.py
+- Cd to model folder and run the ML pipeline: python train.py
+- Cd to app folder and run the webapp: python run.py
+- Access the webapp on localhost:3000
 
 ## Acknowledgements
 - Instruction: https://www.udacity.com/
