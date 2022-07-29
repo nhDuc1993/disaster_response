@@ -16,6 +16,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
 from sklearn.base import BaseEstimator,TransformerMixin
+from sklearn.metrics import classification_report
 
 import pickle
 
@@ -122,6 +123,10 @@ def display_results(y_test, y_pred):
 
     print("Labels:", labels)
     print("Accuracy:", accuracy)
+    
+    for col in y_test.columns:
+        print("category: ", col)
+        print(classification_report(y_test[col], y_pred[col]))
 
 def export_as_pickle(pipeline):
     """
