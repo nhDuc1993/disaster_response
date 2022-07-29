@@ -1,3 +1,4 @@
+import sys
 import pandas as pd
 from sqlalchemy import create_engine
 
@@ -45,12 +46,16 @@ def save_data(df):
 
     
 def main():
-    df = load_data(r'disaster_messages.csv', r'disaster_categories.csv')
-    
-    df = clean_data(df)
-    
-    save_data(df)
+    if len(sys.argv) == 3:
+        messages_filepath, categories_filepath = sys.argv[1:]
+        df = load_data(messages_filepath, categories_filepath)
 
+        df = clean_data(df)
+
+        save_data(df)
+    
+    else:
+        print("Please provide the arguments correctly")
     
 if __name__ == '__main__':
     main()
