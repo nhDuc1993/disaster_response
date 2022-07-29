@@ -32,7 +32,7 @@ def clean_data(df):
     df = pd.concat([df, categories], axis=1)
     
     df.drop_duplicates(inplace=True)
-
+    return df
     
 def save_data(df):
     """
@@ -45,7 +45,7 @@ def save_data(df):
 def main():
     df = load_data(r'disaster_messages.csv', r'disaster_categories.csv')
     
-    clean_data(df)
+    df = clean_data(df)
     
     save_data(df)
 
