@@ -1,10 +1,6 @@
 # Disaster Response Webapp
 
-The project is a Machine Learning Pipeline exercise for analyzing messages in real life disaster situations.
-
-## Motivation
-
-Second project for my Nanodegree course.
+The project is a Machine Learning Pipeline exercise for analyzing messages in real life disaster situations. The purpose is to help people or organization to categorize messages in life threatening circumstances.
 
 ## Dependencies
 - Python
@@ -13,6 +9,23 @@ Second project for my Nanodegree course.
 - SQLlite Database Libraqries: SQLalchemy
 - Model Loading and Saving Library: Pickle
 - Web App and Data Visualization: Flask, Plotly
+
+## Files in the repository
+
+app
+| - template
+| |- master.html # main page of web app
+| |- go.html # classification result page of web app
+|- run.py # Flask file that runs app
+data
+|- disaster_categories.csv # data to process
+|- disaster_messages.csv # data to process
+|- process_data.py
+|- InsertDatabaseName.db # database to save clean data to
+models
+|- train_classifier.py
+|- classifier.pkl # saved model
+README.md
 
 ## Github repo
 https://github.com/nhDuc1993/disaster_response/
