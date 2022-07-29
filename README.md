@@ -20,7 +20,6 @@ The project is a Machine Learning Pipeline exercise for analyzing messages in re
 - data
   - disaster_categories.csv # data to process
   - disaster_messages.csv # data to process
-  - etl_pipeline.ipynb
   - etl_pipeline.py
   - DisasterResponse.db # database to save clean data to
 - models
