@@ -31,9 +31,8 @@ def load_data():
     
     df = pd.read_sql_table('DisasterResponse', engine)
     
-    # Clean data: drop 'child_alone' column and fix 'related' colummn
+    # Clean data: drop 'child_alone'
     df.drop('child_alone', axis=1, inplace=True)
-    df['related'] = df['related'].apply(lambda x: 1 if x==2 else x)
     
     X = df['message']
     y = df.loc[:,'related':]
